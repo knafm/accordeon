@@ -1,0 +1,93 @@
+$activeCol: #8bc540;
+$mainCol: #2f444e;
+$infoBg: #fafafa;
+$infoActiveBg: #efefef;
+$infoActiveTarget: #f7f7f7;
+$controlUnactive: #617178;
+
+.accord {
+  color: $mainCol;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.8em;
+  tr:hover:not(:first-child) {
+    :first-child {
+      color: $activeCol;
+    }
+  }
+}
+
+.accord__control {
+  transition-property: background;
+  transition-duration: 0.3s;
+  border-collapse: collapse;
+  border-bottom: solid 2px white;
+  color: white;
+  background: $controlUnactive;
+  text-align: center;
+  & span {
+    display: block;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 8px;
+    height: 300px;
+    text-align: center;
+  }
+  & div {
+    background-image: url(/images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 40px;
+  }
+}
+
+.accord__control-active {
+  background: $activeCol;
+}
+
+.accord__data {
+  background-color: $infoBg;
+  border: 2px white solid;
+  text-align: center;
+  min-width: 100px;
+  &:hover {
+    color: $activeCol;
+    background-color: $infoActiveBg;
+    cursor: pointer;
+  }
+  &:active {
+    color: $activeCol;
+    background-color: $infoActiveBg;
+  }
+}
+
+.accord__data-unvisible {
+  display: none;
+}
+
+.accord__data_target {
+  background-color: $infoActiveTarget;
+}
+
+.accord__header_target {
+  color: $activeCol;
+}
+
+.accord__header {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.accord__comment {
+  font-size: 0.7em;
+  color: gray;
+}
+
+.accord_first {
+  background-color: $mainCol;
+  color: white;
+  padding: 20px 20px 15px 20px;
+  border-bottom: solid 2px white;
+}
+
+
